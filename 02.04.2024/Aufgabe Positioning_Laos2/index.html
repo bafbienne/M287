@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flag Project</title>
+    <style>
+        /* Write your CSS Code here */
+        .flag {
+            width: 900px;
+            height: 600px;
+            background-color: darkred;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flag>div {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flag>div:nth-child(2),
+        .flag>div:nth-child(3) {
+            background-color: blue;
+        }
+
+        /* Kreis */
+        .flag::before {
+            content: "of Laos";
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            /* Anpassen der Schriftgröße für "OF LAOS" */
+        }
+
+        p {
+            margin: 0;
+            font-size: 60px;
+            /* Anpassen der Schriftgröße für "THE FLAG" */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flag">
+        <p>The Flag</p>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>
