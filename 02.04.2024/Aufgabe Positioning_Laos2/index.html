@@ -6,52 +6,83 @@
     <title>CSS Flag Project</title>
     <style>
         /* Write your CSS Code here */
+      body {
+            margin: 0;
+            padding: 0;
+        }
+
         .flag {
             width: 900px;
             height: 600px;
-            background-color: darkred;
             position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
-        .flag>div {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flag>div:nth-child(2),
-        .flag>div:nth-child(3) {
-            background-color: blue;
-        }
-
-        /* Kreis */
-        .flag::before {
-            content: "of Laos";
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            border-radius: 50%;
+        .flag p {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-size: 36px;
-            /* Anpassen der Schriftgröße für "OF LAOS" */
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
         }
 
-        p {
-            margin: 0;
-            font-size: 60px;
-            /* Anpassen der Schriftgröße für "THE FLAG" */
+        .flag div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 300px;
+            background-color: green;
+        }
+
+        .flag div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .flag div div p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+        }
+
+        .flag div {
+            background-color: blue;
+        }
+
+        .flag div div {
+            background-color: #ff0000;
+            width: 600px;
+        }
+
+        .flag div div:nth-child(2) {
+            width: 300px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+
+        .flag div div:nth-child(3) {
+            width: 200px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
         }
     </style>
 </head>
@@ -60,7 +91,9 @@
     <div class="flag">
         <p>The Flag</p>
         <div>
-            <div></div>
+            <div>
+                <p>of Laos</p>
+            </div>
         </div>
     </div>
 </body>
